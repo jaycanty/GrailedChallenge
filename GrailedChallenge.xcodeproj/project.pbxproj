@@ -14,6 +14,7 @@
 		6909D0071EC278EA00EB774B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6909D0051EC278EA00EB774B /* LaunchScreen.storyboard */; };
 		6909D0121EC278EB00EB774B /* GrailedChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6909D0111EC278EB00EB774B /* GrailedChallengeTests.swift */; };
 		6909D01D1EC27AFD00EB774B /* GrailedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6909D01C1EC27AFD00EB774B /* GrailedListViewController.swift */; };
+		6909D0201EC27BD100EB774B /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6909D01F1EC27BD100EB774B /* DataModel.swift */; };
 		8997BB83421D67BEF13F3F7A /* Pods_GrailedChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F70A0258B2AFF085FBB4BCE /* Pods_GrailedChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		6909D0111EC278EB00EB774B /* GrailedChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrailedChallengeTests.swift; sourceTree = "<group>"; };
 		6909D0131EC278EB00EB774B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6909D01C1EC27AFD00EB774B /* GrailedListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrailedListViewController.swift; sourceTree = "<group>"; };
+		6909D01F1EC27BD100EB774B /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		70E6DC86D9E92F730A491223 /* Pods-GrailedChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrailedChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrailedChallengeTests/Pods-GrailedChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		7F70A0258B2AFF085FBB4BCE /* Pods_GrailedChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrailedChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D0ED443A350E2FD4B7B913 /* Pods_GrailedChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrailedChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 				6909D0001EC278EA00EB774B /* Main.storyboard */,
 				6909CFFC1EC278EA00EB774B /* AppDelegate.swift */,
 				6909D01C1EC27AFD00EB774B /* GrailedListViewController.swift */,
+				6909D01F1EC27BD100EB774B /* DataModel.swift */,
 				6909D01E1EC27B0A00EB774B /* Support */,
 			);
 			path = GrailedChallenge;
@@ -342,6 +345,7 @@
 			files = (
 				6909CFFD1EC278EA00EB774B /* AppDelegate.swift in Sources */,
 				6909D01D1EC27AFD00EB774B /* GrailedListViewController.swift in Sources */,
+				6909D0201EC27BD100EB774B /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
