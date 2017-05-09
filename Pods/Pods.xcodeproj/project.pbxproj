@@ -1,0 +1,757 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09605F7220B4CBF1C484A064C37DE64B /* AlgoliaSearch-Client-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0110FAB3DFC7E9BD030E0C0D2DB8CB /* AlgoliaSearch-Client-Swift-dummy.m */; };
+		1509785646E2372248B312D8E7276083 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5012D375AAF32CB5D5F22CC4DDAB2F3 /* Request.swift */; };
+		2184127CFC37A27F694328F0F080A797 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ACECB97BCB50CBC617E0274B5A5A43 /* Helpers.swift */; };
+		226CCAC79DF253BBB6A9D22D15A0BCF9 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806DB031CC6B123778E0118F8B1D7404 /* Client.swift */; };
+		496B576399417A70CEE39C11A6C12BAA /* Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE1193AED01904959646AD47BA39824 /* Index.swift */; };
+		5008C7424AD54C6BA66598618782DE8F /* Pods-GrailedChallenge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2EA6315C40446ABC762BC23E87025DE /* Pods-GrailedChallenge-dummy.m */; };
+		5C8C9070D5A8E46DB42E0434123BEE15 /* BrowseIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AFECBC9297C07E58D2C4407E17995A /* BrowseIterator.swift */; };
+		63F89D3767BBCD777B621B8358DEECB6 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD55695A0168F9E622B7733C47812C5 /* AsyncOperation.swift */; };
+		693A6A6530E0BA5479E86681D79A4E83 /* AlgoliaSearch-Client-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D8EFA7EC9D69D5AC77C62BFB745EA25E /* AlgoliaSearch-Client-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76859059AECA76CFF03AADAE2463C57C /* AbstractQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B9F14C7590084737F3191699A184E4 /* AbstractQuery.swift */; };
+		79C7955548D01C86D38C0F3465A88FA1 /* DisjunctiveFaceting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897386EF1D0B05B1F149510014BF405E /* DisjunctiveFaceting.swift */; };
+		8FFDEFDEA3EADF257391052D7D96F92C /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7743E702446B23811C35C75FC4CE3E1 /* Error.swift */; };
+		90B99A4D09F3893806C86D70A9BD48DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		94F4C97582550EB551211BC2ADD45708 /* PlacesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296EEA94D388509267C7848C03B38CD /* PlacesClient.swift */; };
+		96C48A26E53BFC6A64935664B56B3FAE /* Pods-GrailedChallengeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E7454E060F7A0B1682DB81A20B25F8FA /* Pods-GrailedChallengeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BE81E4DDB134C27A954EC3EE98B9FEC /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27418A1AD915E59354C9389438655EFF /* Types.swift */; };
+		A3175C0A58FBFF1C49F556E4CE2083D5 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6121D1326842AC4171906C4DB358DB /* Query.swift */; };
+		A6F4E5E999A5EE52E0ED10FA4CC54E28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		AA28A74BB4F630E4888A473674B87924 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F819B0E6BD12673AF95D8F7BA1FE07B5 /* Cache.swift */; };
+		BAC3756D0671DF30209AACAC13BECD64 /* IndexQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465C100FC6EEB1764E337CD3B50DBB33 /* IndexQuery.swift */; };
+		BD6805A0A9238008DD95104801785294 /* Pods-GrailedChallenge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D50CDAD5921FE703A872F9D1CADC858 /* Pods-GrailedChallenge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAD60E2D8F6F9E3DB98A8706B9FC887A /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D58859A836F4F23AB2B0FF421928C5 /* NetworkReachability.swift */; };
+		D715BE51287AA509DB0EC1B233C95C63 /* PlacesQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E266A6F294262D39E8BB6D69A8703D4 /* PlacesQuery.swift */; };
+		D8E98698DAD3EC62135D1D2FFD611D38 /* Pods-GrailedChallengeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C40507B0F899BA0FFE983AE1B92AA28B /* Pods-GrailedChallengeTests-dummy.m */; };
+		E240D821622CEF592D3DB18C6A114CDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		F57B9EAF003D31F85CF13783ED2D5510 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5080F80932FEBC0245A56889FED92A /* Network.swift */; };
+		FFCA4E168776E8376C644C507997F330 /* AbstractClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ADFE1D68BFA7A9A98467BC2E57766A /* AbstractClient.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70FBC3E7A3E5520F39D2063ED817FA51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F5217F425AD5231C3423656272C5A9C;
+			remoteInfo = "AlgoliaSearch-Client-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08ACECB97BCB50CBC617E0274B5A5A43 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Source/Helpers.swift; sourceTree = "<group>"; };
+		0C600B79CFA89FB7584DBEAFCA19D78E /* AlgoliaSearch-Client-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "AlgoliaSearch-Client-Swift.xcconfig"; sourceTree = "<group>"; };
+		0CD55695A0168F9E622B7733C47812C5 /* AsyncOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncOperation.swift; path = Source/AsyncOperation.swift; sourceTree = "<group>"; };
+		1CDC3462AB9AB7ECAAC2F2F5968E3AAA /* Pods-GrailedChallenge-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GrailedChallenge-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2296EEA94D388509267C7848C03B38CD /* PlacesClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlacesClient.swift; path = Source/PlacesClient.swift; sourceTree = "<group>"; };
+		22B9F14C7590084737F3191699A184E4 /* AbstractQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AbstractQuery.swift; path = Source/AbstractQuery.swift; sourceTree = "<group>"; };
+		27418A1AD915E59354C9389438655EFF /* Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Types.swift; path = Source/Types.swift; sourceTree = "<group>"; };
+		2955206C0CB0D46E77A8089A288E563B /* Pods-GrailedChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GrailedChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		2AF5015BFF9C0977B34927719D2C3680 /* Pods-GrailedChallengeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GrailedChallengeTests-frameworks.sh"; sourceTree = "<group>"; };
+		2BDF05364EB7B513576A2723D27A99F1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D50CDAD5921FE703A872F9D1CADC858 /* Pods-GrailedChallenge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GrailedChallenge-umbrella.h"; sourceTree = "<group>"; };
+		354AC5204B7EBE12E5CC6C49E7CE681E /* Pods-GrailedChallenge-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GrailedChallenge-resources.sh"; sourceTree = "<group>"; };
+		3C0110FAB3DFC7E9BD030E0C0D2DB8CB /* AlgoliaSearch-Client-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AlgoliaSearch-Client-Swift-dummy.m"; sourceTree = "<group>"; };
+		4263C2844A12D08F63A4F50CEAA47B1D /* Pods-GrailedChallenge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GrailedChallenge.modulemap"; sourceTree = "<group>"; };
+		465C100FC6EEB1764E337CD3B50DBB33 /* IndexQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndexQuery.swift; path = Source/IndexQuery.swift; sourceTree = "<group>"; };
+		51D58859A836F4F23AB2B0FF421928C5 /* NetworkReachability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachability.swift; path = Source/NetworkReachability.swift; sourceTree = "<group>"; };
+		5626650EA2741AB0B0DB62BBEB79CCBB /* Pods-GrailedChallengeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GrailedChallengeTests.modulemap"; sourceTree = "<group>"; };
+		5D5080F80932FEBC0245A56889FED92A /* Network.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Network.swift; path = Source/Network.swift; sourceTree = "<group>"; };
+		5DB8CA33D875118CA66B7A9807FEE005 /* Pods-GrailedChallengeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GrailedChallengeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		778E68644DC23A8D4A2248F17A77E266 /* Pods_GrailedChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GrailedChallenge.framework; path = "Pods-GrailedChallenge.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7966770C3EBAF6D4B9434A0C41ED2D1F /* Pods_GrailedChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GrailedChallengeTests.framework; path = "Pods-GrailedChallengeTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E266A6F294262D39E8BB6D69A8703D4 /* PlacesQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlacesQuery.swift; path = Source/PlacesQuery.swift; sourceTree = "<group>"; };
+		806DB031CC6B123778E0118F8B1D7404 /* Client.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Client.swift; path = Source/Client.swift; sourceTree = "<group>"; };
+		897386EF1D0B05B1F149510014BF405E /* DisjunctiveFaceting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DisjunctiveFaceting.swift; path = Source/Helpers/DisjunctiveFaceting.swift; sourceTree = "<group>"; };
+		8F2C257A405338CB933375E80C9F1A5C /* AlgoliaSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AlgoliaSearch.framework; path = "AlgoliaSearch-Client-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98CFA84C82DD15BC16253A16C4CD407D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FABC96560EC94A4A09CA8680F63A3F1 /* AlgoliaSearch-Client-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "AlgoliaSearch-Client-Swift.modulemap"; sourceTree = "<group>"; };
+		A25754988E97CBA4999A488F3B875093 /* Pods-GrailedChallenge-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GrailedChallenge-acknowledgements.plist"; sourceTree = "<group>"; };
+		A7743E702446B23811C35C75FC4CE3E1 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
+		AA18EBA0ED18DD28F0A55BDD9E220A42 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB5E0CA0FF6A9C38E26D7E5F618526DB /* Pods-GrailedChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GrailedChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC37B0A002AAA72DEA834C4EFD982CC9 /* Pods-GrailedChallengeTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GrailedChallengeTests-resources.sh"; sourceTree = "<group>"; };
+		B8A7DD526C93A48FEAF28E3750B84F90 /* AlgoliaSearch-Client-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlgoliaSearch-Client-Swift-prefix.pch"; sourceTree = "<group>"; };
+		C0058E1B2B56701D51618315D344EAD6 /* Pods-GrailedChallenge-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GrailedChallenge-frameworks.sh"; sourceTree = "<group>"; };
+		C40507B0F899BA0FFE983AE1B92AA28B /* Pods-GrailedChallengeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GrailedChallengeTests-dummy.m"; sourceTree = "<group>"; };
+		C47761CA9A123315506B1C1E06387289 /* Pods-GrailedChallengeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GrailedChallengeTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CC195EDAADE29D037D972C3F532979D3 /* Pods-GrailedChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GrailedChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		CF6121D1326842AC4171906C4DB358DB /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = Source/Query.swift; sourceTree = "<group>"; };
+		CFE1193AED01904959646AD47BA39824 /* Index.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Index.swift; path = Source/Index.swift; sourceTree = "<group>"; };
+		D1ADFE1D68BFA7A9A98467BC2E57766A /* AbstractClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AbstractClient.swift; path = Source/AbstractClient.swift; sourceTree = "<group>"; };
+		D8EFA7EC9D69D5AC77C62BFB745EA25E /* AlgoliaSearch-Client-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlgoliaSearch-Client-Swift-umbrella.h"; sourceTree = "<group>"; };
+		E7454E060F7A0B1682DB81A20B25F8FA /* Pods-GrailedChallengeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GrailedChallengeTests-umbrella.h"; sourceTree = "<group>"; };
+		E7AFECBC9297C07E58D2C4407E17995A /* BrowseIterator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrowseIterator.swift; path = Source/Helpers/BrowseIterator.swift; sourceTree = "<group>"; };
+		EEEC76E9FB8749596F982EB7F586E2E8 /* Pods-GrailedChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GrailedChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		F2EA6315C40446ABC762BC23E87025DE /* Pods-GrailedChallenge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GrailedChallenge-dummy.m"; sourceTree = "<group>"; };
+		F5012D375AAF32CB5D5F22CC4DDAB2F3 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		F819B0E6BD12673AF95D8F7BA1FE07B5 /* Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = Source/Cache.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2156A3F7BD341104EF3B6BDC18C0D6BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B99A4D09F3893806C86D70A9BD48DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5786E77C39D5F39E46420567243A3E44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E240D821622CEF592D3DB18C6A114CDD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82FCEEB0A1991D0B113F528DA4F6D412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6F4E5E999A5EE52E0ED10FA4CC54E28 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17FC0472FC98FC1B95B03A5DAAD0B6D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76F825EF73ECFC8167DCC58FD3B1FF32 /* AlgoliaSearch-Client-Swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		50BC93C09F6B0B9D47FE78251F5E7930 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FABC96560EC94A4A09CA8680F63A3F1 /* AlgoliaSearch-Client-Swift.modulemap */,
+				0C600B79CFA89FB7584DBEAFCA19D78E /* AlgoliaSearch-Client-Swift.xcconfig */,
+				3C0110FAB3DFC7E9BD030E0C0D2DB8CB /* AlgoliaSearch-Client-Swift-dummy.m */,
+				B8A7DD526C93A48FEAF28E3750B84F90 /* AlgoliaSearch-Client-Swift-prefix.pch */,
+				D8EFA7EC9D69D5AC77C62BFB745EA25E /* AlgoliaSearch-Client-Swift-umbrella.h */,
+				2BDF05364EB7B513576A2723D27A99F1 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AlgoliaSearch-Client-Swift";
+			sourceTree = "<group>";
+		};
+		695C0B4B54FF288B365D6125CF3BD5BA /* Pods-GrailedChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				AA18EBA0ED18DD28F0A55BDD9E220A42 /* Info.plist */,
+				4263C2844A12D08F63A4F50CEAA47B1D /* Pods-GrailedChallenge.modulemap */,
+				1CDC3462AB9AB7ECAAC2F2F5968E3AAA /* Pods-GrailedChallenge-acknowledgements.markdown */,
+				A25754988E97CBA4999A488F3B875093 /* Pods-GrailedChallenge-acknowledgements.plist */,
+				F2EA6315C40446ABC762BC23E87025DE /* Pods-GrailedChallenge-dummy.m */,
+				C0058E1B2B56701D51618315D344EAD6 /* Pods-GrailedChallenge-frameworks.sh */,
+				354AC5204B7EBE12E5CC6C49E7CE681E /* Pods-GrailedChallenge-resources.sh */,
+				2D50CDAD5921FE703A872F9D1CADC858 /* Pods-GrailedChallenge-umbrella.h */,
+				CC195EDAADE29D037D972C3F532979D3 /* Pods-GrailedChallenge.debug.xcconfig */,
+				EEEC76E9FB8749596F982EB7F586E2E8 /* Pods-GrailedChallenge.release.xcconfig */,
+			);
+			name = "Pods-GrailedChallenge";
+			path = "Target Support Files/Pods-GrailedChallenge";
+			sourceTree = "<group>";
+		};
+		6EE4D652B3E8C7763E8A7CCD83A9913F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F2C257A405338CB933375E80C9F1A5C /* AlgoliaSearch.framework */,
+				778E68644DC23A8D4A2248F17A77E266 /* Pods_GrailedChallenge.framework */,
+				7966770C3EBAF6D4B9434A0C41ED2D1F /* Pods_GrailedChallengeTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		76F825EF73ECFC8167DCC58FD3B1FF32 /* AlgoliaSearch-Client-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				D1ADFE1D68BFA7A9A98467BC2E57766A /* AbstractClient.swift */,
+				22B9F14C7590084737F3191699A184E4 /* AbstractQuery.swift */,
+				0CD55695A0168F9E622B7733C47812C5 /* AsyncOperation.swift */,
+				E7AFECBC9297C07E58D2C4407E17995A /* BrowseIterator.swift */,
+				F819B0E6BD12673AF95D8F7BA1FE07B5 /* Cache.swift */,
+				806DB031CC6B123778E0118F8B1D7404 /* Client.swift */,
+				897386EF1D0B05B1F149510014BF405E /* DisjunctiveFaceting.swift */,
+				A7743E702446B23811C35C75FC4CE3E1 /* Error.swift */,
+				08ACECB97BCB50CBC617E0274B5A5A43 /* Helpers.swift */,
+				CFE1193AED01904959646AD47BA39824 /* Index.swift */,
+				465C100FC6EEB1764E337CD3B50DBB33 /* IndexQuery.swift */,
+				5D5080F80932FEBC0245A56889FED92A /* Network.swift */,
+				51D58859A836F4F23AB2B0FF421928C5 /* NetworkReachability.swift */,
+				2296EEA94D388509267C7848C03B38CD /* PlacesClient.swift */,
+				7E266A6F294262D39E8BB6D69A8703D4 /* PlacesQuery.swift */,
+				CF6121D1326842AC4171906C4DB358DB /* Query.swift */,
+				F5012D375AAF32CB5D5F22CC4DDAB2F3 /* Request.swift */,
+				27418A1AD915E59354C9389438655EFF /* Types.swift */,
+				50BC93C09F6B0B9D47FE78251F5E7930 /* Support Files */,
+			);
+			name = "AlgoliaSearch-Client-Swift";
+			path = "AlgoliaSearch-Client-Swift";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				17FC0472FC98FC1B95B03A5DAAD0B6D5 /* Pods */,
+				6EE4D652B3E8C7763E8A7CCD83A9913F /* Products */,
+				ACCA76D79EA0A16EA13139533F2A1A1F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		ACCA76D79EA0A16EA13139533F2A1A1F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				695C0B4B54FF288B365D6125CF3BD5BA /* Pods-GrailedChallenge */,
+				CD7F575FA48D857D2B05CC5F8636DB95 /* Pods-GrailedChallengeTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD7F575FA48D857D2B05CC5F8636DB95 /* Pods-GrailedChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				98CFA84C82DD15BC16253A16C4CD407D /* Info.plist */,
+				5626650EA2741AB0B0DB62BBEB79CCBB /* Pods-GrailedChallengeTests.modulemap */,
+				5DB8CA33D875118CA66B7A9807FEE005 /* Pods-GrailedChallengeTests-acknowledgements.markdown */,
+				C47761CA9A123315506B1C1E06387289 /* Pods-GrailedChallengeTests-acknowledgements.plist */,
+				C40507B0F899BA0FFE983AE1B92AA28B /* Pods-GrailedChallengeTests-dummy.m */,
+				2AF5015BFF9C0977B34927719D2C3680 /* Pods-GrailedChallengeTests-frameworks.sh */,
+				AC37B0A002AAA72DEA834C4EFD982CC9 /* Pods-GrailedChallengeTests-resources.sh */,
+				E7454E060F7A0B1682DB81A20B25F8FA /* Pods-GrailedChallengeTests-umbrella.h */,
+				AB5E0CA0FF6A9C38E26D7E5F618526DB /* Pods-GrailedChallengeTests.debug.xcconfig */,
+				2955206C0CB0D46E77A8089A288E563B /* Pods-GrailedChallengeTests.release.xcconfig */,
+			);
+			name = "Pods-GrailedChallengeTests";
+			path = "Target Support Files/Pods-GrailedChallengeTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		54FB60C1F730AF6987D26409A198D34B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD6805A0A9238008DD95104801785294 /* Pods-GrailedChallenge-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87FA004887A09167861B8F436021DCBA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96C48A26E53BFC6A64935664B56B3FAE /* Pods-GrailedChallengeTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A6FBAF9658004FCC4639CE99A92E035 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				693A6A6530E0BA5479E86681D79A4E83 /* AlgoliaSearch-Client-Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		20B67FEC59D671B378E9E15F82550014 /* Pods-GrailedChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E4290F116775467123447139EC058FC /* Build configuration list for PBXNativeTarget "Pods-GrailedChallenge" */;
+			buildPhases = (
+				5EC111E8D4B1AB0DA930609CFB79BD17 /* Sources */,
+				82FCEEB0A1991D0B113F528DA4F6D412 /* Frameworks */,
+				54FB60C1F730AF6987D26409A198D34B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA4E008162B45B7B405FB7B55D1766A1 /* PBXTargetDependency */,
+			);
+			name = "Pods-GrailedChallenge";
+			productName = "Pods-GrailedChallenge";
+			productReference = 778E68644DC23A8D4A2248F17A77E266 /* Pods_GrailedChallenge.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5F5217F425AD5231C3423656272C5A9C /* AlgoliaSearch-Client-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 745731A029DF34D7D989666D49C95DBD /* Build configuration list for PBXNativeTarget "AlgoliaSearch-Client-Swift" */;
+			buildPhases = (
+				16205002294DD3603F3D9766E60F413D /* Sources */,
+				2156A3F7BD341104EF3B6BDC18C0D6BF /* Frameworks */,
+				9A6FBAF9658004FCC4639CE99A92E035 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AlgoliaSearch-Client-Swift";
+			productName = "AlgoliaSearch-Client-Swift";
+			productReference = 8F2C257A405338CB933375E80C9F1A5C /* AlgoliaSearch.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ED47610B333F736B45401C6F899B5662 /* Pods-GrailedChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E258919ED0982A776ABB31BC3CE0AB9 /* Build configuration list for PBXNativeTarget "Pods-GrailedChallengeTests" */;
+			buildPhases = (
+				585A8A890857A7F6319CF000C068E631 /* Sources */,
+				5786E77C39D5F39E46420567243A3E44 /* Frameworks */,
+				87FA004887A09167861B8F436021DCBA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GrailedChallengeTests";
+			productName = "Pods-GrailedChallengeTests";
+			productReference = 7966770C3EBAF6D4B9434A0C41ED2D1F /* Pods_GrailedChallengeTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 6EE4D652B3E8C7763E8A7CCD83A9913F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F5217F425AD5231C3423656272C5A9C /* AlgoliaSearch-Client-Swift */,
+				20B67FEC59D671B378E9E15F82550014 /* Pods-GrailedChallenge */,
+				ED47610B333F736B45401C6F899B5662 /* Pods-GrailedChallengeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16205002294DD3603F3D9766E60F413D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFCA4E168776E8376C644C507997F330 /* AbstractClient.swift in Sources */,
+				76859059AECA76CFF03AADAE2463C57C /* AbstractQuery.swift in Sources */,
+				09605F7220B4CBF1C484A064C37DE64B /* AlgoliaSearch-Client-Swift-dummy.m in Sources */,
+				63F89D3767BBCD777B621B8358DEECB6 /* AsyncOperation.swift in Sources */,
+				5C8C9070D5A8E46DB42E0434123BEE15 /* BrowseIterator.swift in Sources */,
+				AA28A74BB4F630E4888A473674B87924 /* Cache.swift in Sources */,
+				226CCAC79DF253BBB6A9D22D15A0BCF9 /* Client.swift in Sources */,
+				79C7955548D01C86D38C0F3465A88FA1 /* DisjunctiveFaceting.swift in Sources */,
+				8FFDEFDEA3EADF257391052D7D96F92C /* Error.swift in Sources */,
+				2184127CFC37A27F694328F0F080A797 /* Helpers.swift in Sources */,
+				496B576399417A70CEE39C11A6C12BAA /* Index.swift in Sources */,
+				BAC3756D0671DF30209AACAC13BECD64 /* IndexQuery.swift in Sources */,
+				F57B9EAF003D31F85CF13783ED2D5510 /* Network.swift in Sources */,
+				CAD60E2D8F6F9E3DB98A8706B9FC887A /* NetworkReachability.swift in Sources */,
+				94F4C97582550EB551211BC2ADD45708 /* PlacesClient.swift in Sources */,
+				D715BE51287AA509DB0EC1B233C95C63 /* PlacesQuery.swift in Sources */,
+				A3175C0A58FBFF1C49F556E4CE2083D5 /* Query.swift in Sources */,
+				1509785646E2372248B312D8E7276083 /* Request.swift in Sources */,
+				9BE81E4DDB134C27A954EC3EE98B9FEC /* Types.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		585A8A890857A7F6319CF000C068E631 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E98698DAD3EC62135D1D2FFD611D38 /* Pods-GrailedChallengeTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EC111E8D4B1AB0DA930609CFB79BD17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5008C7424AD54C6BA66598618782DE8F /* Pods-GrailedChallenge-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA4E008162B45B7B405FB7B55D1766A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AlgoliaSearch-Client-Swift";
+			target = 5F5217F425AD5231C3423656272C5A9C /* AlgoliaSearch-Client-Swift */;
+			targetProxy = 70FBC3E7A3E5520F39D2063ED817FA51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0BCB53B4266160E73DA1F5742B061DEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEEC76E9FB8749596F982EB7F586E2E8 /* Pods-GrailedChallenge.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GrailedChallenge/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GrailedChallenge/Pods-GrailedChallenge.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GrailedChallenge;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4E99136AD6A0A37A1DF74A2C2DDD9DD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB5E0CA0FF6A9C38E26D7E5F618526DB /* Pods-GrailedChallengeTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GrailedChallengeTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GrailedChallengeTests/Pods-GrailedChallengeTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GrailedChallengeTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5FAD0F18E66B4060B6042DB0DB3E8DB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C600B79CFA89FB7584DBEAFCA19D78E /* AlgoliaSearch-Client-Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AlgoliaSearch-Client-Swift/AlgoliaSearch-Client-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AlgoliaSearch-Client-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AlgoliaSearch-Client-Swift/AlgoliaSearch-Client-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AlgoliaSearch;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		673254EEAF0B5BF4596080C749645884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		776718B6403B5248F1D402E7C6A2D2C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2955206C0CB0D46E77A8089A288E563B /* Pods-GrailedChallengeTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GrailedChallengeTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GrailedChallengeTests/Pods-GrailedChallengeTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GrailedChallengeTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9ABFA24CD48975D914817BE4B3485922 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C600B79CFA89FB7584DBEAFCA19D78E /* AlgoliaSearch-Client-Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AlgoliaSearch-Client-Swift/AlgoliaSearch-Client-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AlgoliaSearch-Client-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AlgoliaSearch-Client-Swift/AlgoliaSearch-Client-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AlgoliaSearch;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9B64C03FB8766F7410C5EE924CA3B8A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC195EDAADE29D037D972C3F532979D3 /* Pods-GrailedChallenge.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GrailedChallenge/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GrailedChallenge/Pods-GrailedChallenge.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GrailedChallenge;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
+				673254EEAF0B5BF4596080C749645884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E258919ED0982A776ABB31BC3CE0AB9 /* Build configuration list for PBXNativeTarget "Pods-GrailedChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E99136AD6A0A37A1DF74A2C2DDD9DD7 /* Debug */,
+				776718B6403B5248F1D402E7C6A2D2C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E4290F116775467123447139EC058FC /* Build configuration list for PBXNativeTarget "Pods-GrailedChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B64C03FB8766F7410C5EE924CA3B8A3 /* Debug */,
+				0BCB53B4266160E73DA1F5742B061DEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		745731A029DF34D7D989666D49C95DBD /* Build configuration list for PBXNativeTarget "AlgoliaSearch-Client-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FAD0F18E66B4060B6042DB0DB3E8DB4 /* Debug */,
+				9ABFA24CD48975D914817BE4B3485922 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
