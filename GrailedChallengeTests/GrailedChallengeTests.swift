@@ -13,17 +13,26 @@ class GrailedChallengeTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testFetch() {
+        
+        let exp = expectation(description: "Fetch Data")
+        
+        let model = DataModel()
+        model.fetchListData() {
+            exp.fulfill()
+        }
+        
+        waitForExpectations(timeout: 20) { error in
+            if error != nil {
+                XCTAssert(false)
+            }
+        }
     }
     
     func testPerformanceExample() {
