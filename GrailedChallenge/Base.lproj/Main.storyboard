@@ -20,9 +20,40 @@
                     <view key="view" contentMode="scaleToFill" id="w1W-Rb-0Sq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P4W-7T-arl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OtM-yN-Lxm">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="21c-eJ-qIP" customClass="GrailedCollectionViewCell" customModule="GrailedChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YU7-ua-8Q9" firstAttribute="top" secondItem="P4W-7T-arl" secondAttribute="bottom" id="TBB-Mf-7IT"/>
+                            <constraint firstAttribute="trailing" secondItem="P4W-7T-arl" secondAttribute="trailing" id="XuN-rV-wg7"/>
+                            <constraint firstItem="P4W-7T-arl" firstAttribute="top" secondItem="w1W-Rb-0Sq" secondAttribute="top" id="ecs-U6-TVz"/>
+                            <constraint firstItem="P4W-7T-arl" firstAttribute="leading" secondItem="w1W-Rb-0Sq" secondAttribute="leading" id="xQR-aJ-tMy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0Cp-K9-pG0"/>
+                    <connections>
+                        <outlet property="collectionView" destination="P4W-7T-arl" id="pav-ZH-QjH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxy-j0-hmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

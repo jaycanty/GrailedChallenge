@@ -10,6 +10,9 @@ import UIKit
 
 class GrailedListViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

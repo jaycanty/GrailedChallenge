@@ -27,6 +27,8 @@ class DataModel {
                 complete(result)
             case let .success(data):
                 items += data
+                // TODO: get max page and check
+                currentPage += 1
                 complete(.success(items))
             }
         }
