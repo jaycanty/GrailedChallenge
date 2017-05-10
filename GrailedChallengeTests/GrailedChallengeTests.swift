@@ -19,12 +19,28 @@ class GrailedChallengeTests: XCTestCase {
         super.tearDown()
     }
     
+    func testDate() {
+        let dateString = "2017-05-10T01:42:55.986Z"
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .iso8601)
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"
+        let date = formatter.date(from: dateString)!
+        let cal = Calendar.current
+        // not gonna worry about time zones
+        XCTAssert(cal.component(.year, from: date) == 2017)
+        XCTAssert(cal.component(.month, from: date) == 5)
+        XCTAssert(cal.component(.day, from: date) == 9)
+        XCTAssert(cal.component(.hour, from: date) == 21)
+        XCTAssert(cal.component(.minute, from: date) == 42)
+        XCTAssert(cal.component(.second, from: date) == 55)
+    }
+    
     func testFetch() {
         
         let exp = expectation(description: "Fetch Data")
         
         let model = DataService()
-        model.fetchListData() {
+        model.fetchListData(for: 1) {_ in 
             exp.fulfill()
         }
         
