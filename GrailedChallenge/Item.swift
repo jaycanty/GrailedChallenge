@@ -11,6 +11,7 @@ import Foundation
 
 struct Item {
 
+    var id: Int
     var createdAt: Date
     var title: String
     var desc: String
