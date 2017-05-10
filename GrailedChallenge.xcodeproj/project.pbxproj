@@ -121,15 +121,10 @@
 		6909CFFB1EC278EA00EB774B /* GrailedChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				6909D0001EC278EA00EB774B /* Main.storyboard */,
 				6909CFFC1EC278EA00EB774B /* AppDelegate.swift */,
-				6909D01C1EC27AFD00EB774B /* GrailedListViewController.swift */,
-				6909D0291EC36C9400EB774B /* GrailedCollectionViewCell.swift */,
-				6909D0271EC3678D00EB774B /* DataModel.swift */,
-				6909D01F1EC27BD100EB774B /* DataService.swift */,
-				6909D0211EC2AD4700EB774B /* Item.swift */,
-				6909D0231EC3534C00EB774B /* JJson.swift */,
-				6909D0251EC3547600EB774B /* Utils.swift */,
+				6909D0001EC278EA00EB774B /* Main.storyboard */,
+				6909D02B1EC36CDA00EB774B /* UI */,
+				6909D02C1EC36CE700EB774B /* Model */,
 				6909D01E1EC27B0A00EB774B /* Support */,
 			);
 			path = GrailedChallenge;
@@ -152,6 +147,27 @@
 				6909D0081EC278EA00EB774B /* Info.plist */,
 			);
 			name = Support;
+			sourceTree = "<group>";
+		};
+		6909D02B1EC36CDA00EB774B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6909D01C1EC27AFD00EB774B /* GrailedListViewController.swift */,
+				6909D0291EC36C9400EB774B /* GrailedCollectionViewCell.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		6909D02C1EC36CE700EB774B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6909D0271EC3678D00EB774B /* DataModel.swift */,
+				6909D01F1EC27BD100EB774B /* DataService.swift */,
+				6909D0211EC2AD4700EB774B /* Item.swift */,
+				6909D0231EC3534C00EB774B /* JJson.swift */,
+				6909D0251EC3547600EB774B /* Utils.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
