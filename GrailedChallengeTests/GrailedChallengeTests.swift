@@ -55,6 +55,40 @@ class GrailedChallengeTests: XCTestCase {
         }
     }
     
+    func testPagination() {
+        let exp = expectation(description: "Pagination")
+        let model = DataService()
+        var items = [Item]()
+        model.fetchListData(for: 1) {result in
+            switch result {
+            case .error(_):
+                XCTAssert(false)
+            case let .success(data):
+                items += data
+                model.fetchListData(for: 2) {result in
+                    switch result {
+                    case .error(_):
+                        XCTAssert(false)
+                    case let .success(data):
+                        items += data
+                        XCTAssert(items.count == 40)
+                        var ids = Set<Int>()
+                        for item in items {
+                            ids.insert(item.id)
+                        }
+                        XCTAssert(ids.count == 40)
+                    }
+                    exp.fulfill()
+                }
+            }
+        }
+        waitForExpectations(timeout: 20) { error in
+            if error != nil {
+                XCTAssert(false)
+            }
+        }
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
