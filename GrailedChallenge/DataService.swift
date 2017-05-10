@@ -9,7 +9,7 @@
 import Foundation
 import AlgoliaSearch
 
-class DataModel {
+class DataService {
 
     let indexName = "Listing_production"
     let client = Client(

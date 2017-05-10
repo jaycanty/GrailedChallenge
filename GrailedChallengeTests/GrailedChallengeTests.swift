@@ -23,7 +23,7 @@ class GrailedChallengeTests: XCTestCase {
         
         let exp = expectation(description: "Fetch Data")
         
-        let model = DataModel()
+        let model = DataService()
         model.fetchListData() {
             exp.fulfill()
         }
