@@ -11,10 +11,23 @@ import UIKit
 class GrailedListViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    let model = DataModel()
+    var items = [Item]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func getItems() {
+        model.getData() { result in
+            switch result {
+            case .error(_):
+                // TODO: show error
+                break
+            case let .success(data):
+                self.items = data
+            }
+        }
     }
 }
 
@@ -22,7 +35,7 @@ class GrailedListViewController: UIViewController {
 extension GrailedListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
