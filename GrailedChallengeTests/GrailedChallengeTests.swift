@@ -35,15 +35,19 @@ class GrailedChallengeTests: XCTestCase {
         XCTAssert(cal.component(.second, from: date) == 55)
     }
     
-    func testFetch() {
-        
+    func testSingleFetch() {
         let exp = expectation(description: "Fetch Data")
-        
         let model = DataService()
-        model.fetchListData(for: 1) {_ in 
+        model.fetchListData(for: 1) {result in
+            
+            switch result {
+            case .error(_):
+                XCTAssert(false)
+            case let .success(data):
+                XCTAssert(data.count == 20)
+            }
             exp.fulfill()
         }
-        
         waitForExpectations(timeout: 20) { error in
             if error != nil {
                 XCTAssert(false)

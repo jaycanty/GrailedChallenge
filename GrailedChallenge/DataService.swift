@@ -10,6 +10,13 @@ import Foundation
 import AlgoliaSearch
 
 class DataService {
+    
+    let formatter = DateFormatter()
+    
+    init() {
+        formatter.calendar = Calendar(identifier: .iso8601)
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"
+    }
 
     let indexName = "Listing_production"
     let client = Client(
@@ -17,29 +24,43 @@ class DataService {
         apiKey: "ce26ba82dbc20d4f25c28a2077ce159d"
     )
     
-    
-    func fetchListData(complete: @escaping ()->()) {
+    func fetchListData(for page: UInt, complete: @escaping (Result<[Item]>)->()) {
         let index = client.index(withName: indexName)
         let query = Query()
+        query.page = page
         index.search(query) { content, error in
-            
-            if let hits = content?["hits"] as? Array<[String:Any]> {
-                
-                print(hits.count)
-                
-                if let first = hits.first {
-                    for key in first.keys {
-                        print("\(key): \(first[key])")
-                        print("------------------------")
+            guard let content = content else {
+                complete(.error(message: "fetching error"))
+                return
+            }
+            let json = JJSON(content)
+            var items = [Item]()
+            if let hits = json["hits"] {
+                for itemJson in hits {
+                    if let id = itemJson["id"]?.int,
+                        let createdAtString = itemJson["created_at"]?.string,
+                        let date = self.formatter.date(from: createdAtString),
+                        let title = itemJson["title"]?.string,
+                        let desc = itemJson["description"]?.string,
+                        let designerName = itemJson["designers"]?[0]?["name"]?.string,
+                        let size = itemJson["size"]?.string,
+                        let price = itemJson["price_i"]?.int,
+                        let photo = itemJson["cover_photo"]?["url"]?.string {
+                        let item = Item(
+                            id: id,
+                            createdAt: date,
+                            title: title,
+                            desc: desc,
+                            designerName: designerName,
+                            size: size,
+                            price: price,
+                            photo: photo
+                        )
+                        items.append(item)
                     }
                 }
-        
-                
-                
-                
             }
-            
-            complete()
+            complete(.success(data: items))
         }
     }
 }
