@@ -13,9 +13,16 @@ class GrailedListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     let model = DataModel()
     var items = [Item]()
+    var cellWidth: CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let padding = layout.minimumLineSpacing
+        cellWidth = (UIScreen.main.bounds.width - (3 * padding))/2
+        
+        getItems()
     }
     
     func getItems() {
@@ -26,6 +33,7 @@ class GrailedListViewController: UIViewController {
                 break
             case let .success(data):
                 self.items = data
+                self.collectionView.reloadData()
             }
         }
     }
@@ -40,7 +48,17 @@ extension GrailedListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GrailedCollectionViewCell", for: indexPath) as! GrailedCollectionViewCell
+        cell.data = items[indexPath.item]
         return cell
     }
+}
+
+extension GrailedListViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: cellWidth, height: cellWidth * 1.6)
+    }
+    
 }
  

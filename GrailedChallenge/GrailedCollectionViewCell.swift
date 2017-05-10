@@ -15,5 +15,21 @@ class GrailedCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var designerLabel: UILabel!
     
+    var data: Item! {
+        didSet {
+            updateUI()
+        }
+    }
     
+    func updateUI() {
+        titleLabel.text = data.title
+        designerLabel.text = data.designerName
+    }
+    
+    
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        let atrbs = super.preferredLayoutAttributesFitting(layoutAttributes)
+        print(atrbs.frame)
+        return atrbs
+    }
 }
