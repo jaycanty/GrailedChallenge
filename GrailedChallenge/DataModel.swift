@@ -20,8 +20,25 @@ class DataModel {
     
     func fetchListData(complete: @escaping ()->()) {
         let index = client.index(withName: indexName)
-        let query = Query(query: "hello")
+        let query = Query()
         index.search(query) { content, error in
+            
+            if let hits = content?["hits"] as? Array<[String:Any]> {
+                
+                print(hits.count)
+                
+                if let first = hits.first {
+                    for key in first.keys {
+                        print("\(key): \(first[key])")
+                        print("------------------------")
+                    }
+                }
+        
+                
+                
+                
+            }
+            
             complete()
         }
     }
