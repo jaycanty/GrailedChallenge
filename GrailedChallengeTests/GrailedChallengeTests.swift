@@ -37,8 +37,8 @@ class GrailedChallengeTests: XCTestCase {
     
     func testSingleFetch() {
         let exp = expectation(description: "Fetch Data")
-        let model = DataService()
-        model.fetchListData(for: 1) {result in
+        let service = DataService()
+        service.fetchListData(for: 1) {result in
             
             switch result {
             case .error(_):
@@ -57,15 +57,15 @@ class GrailedChallengeTests: XCTestCase {
     
     func testPagination() {
         let exp = expectation(description: "Pagination")
-        let model = DataService()
+        let service = DataService()
         var items = [Item]()
-        model.fetchListData(for: 1) {result in
+        service.fetchListData(for: 1) {result in
             switch result {
             case .error(_):
                 XCTAssert(false)
             case let .success(data):
                 items += data
-                model.fetchListData(for: 2) {result in
+                service.fetchListData(for: 2) {result in
                     switch result {
                     case .error(_):
                         XCTAssert(false)
