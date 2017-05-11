@@ -18,16 +18,13 @@ class GrailedListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let nib = UINib(nibName: "GrailedCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "GrailedCollectionViewCell")
         refCell = Bundle.main.loadNibNamed("GrailedCollectionViewCell", owner: self, options: nil)!.first as! GrailedCollectionViewCell
-        
-        
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let padding = layout.minimumLineSpacing
         cellWidth = (UIScreen.main.bounds.width - (3 * padding))/2
-        
+        refCell.setWidthConstraint(cellWidth)
         getItems()
     }
     

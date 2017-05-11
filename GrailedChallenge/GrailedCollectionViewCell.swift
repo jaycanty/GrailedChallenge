@@ -13,7 +13,6 @@ class GrailedCollectionViewCell: UICollectionViewCell {
     static var width: CGFloat = 0
 
     @IBOutlet weak var container: UIView!
-    @IBOutlet weak var containerViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageAspectRatioConstraint: NSLayoutConstraint!
     @IBOutlet weak var titleLabel: UILabel!
@@ -38,12 +37,14 @@ class GrailedCollectionViewCell: UICollectionViewCell {
         designerLabel.text = data.designerName
     }
     
+    //MARK: ref cell - bit hacky
+    func setWidthConstraint(_ width: CGFloat) {
+        container.widthAnchor.constraint(equalToConstant: width).isActive = true
+    }
+    
     func size(with item: Item, for width: CGFloat) -> CGSize {
-        containerViewWidthConstraint.constant = width
         titleLabel.text = item.title
         designerLabel.text = item.designerName
         return container.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
     }
-
-    
 }
