@@ -75,10 +75,6 @@ private class ImageClosure {
             DispatchQueue.main.async {
                 // Think there may be a bug in the API seems to switch width and height sometimes
                 if self?.view != nil && (CGFloat(self?.view?.data.photo.width ?? 0) != image?.size.width || CGFloat(self?.view?.data.photo.height ?? 0) != image?.size.height) {
-                    print("!-------------------------!!!!!!!!!!")
-                    print(self?.view?.data.photo.width)
-                    print(self?.view?.data.photo.height)
-                    print(image?.size)
                     self?.view?.imageView.contentMode = .scaleAspectFit
                 }
                 self?.view?.imageView.image = image
