@@ -15,23 +15,16 @@ class GrailedListViewController: UIViewController {
     fileprivate let model = DataModel()
     fileprivate var items = [Item]()
     
-    fileprivate var cellWidth: CGFloat!
     fileprivate let cellId = "GrailedCollectionViewCell"
     fileprivate var refCell: GrailedCollectionViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nib = UINib(nibName: cellId, bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: cellId)
-        refCell = Bundle.main.loadNibNamed(cellId, owner: self, options: nil)!.first as! GrailedCollectionViewCell
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        let padding = layout.minimumLineSpacing
-        cellWidth = (UIScreen.main.bounds.width - (3 * padding))/2
-        refCell.setWidthConstraint(cellWidth)
+        configure()
         getItems()
     }
     
-    func getItems() {
+    fileprivate func getItems() {
         model.getData() { result in
             switch result {
             case .error(_):
@@ -42,6 +35,16 @@ class GrailedListViewController: UIViewController {
                 self.collectionView.reloadData()
             }
         }
+    }
+    
+    fileprivate func configure() {
+        let nib = UINib(nibName: cellId, bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: cellId)
+        refCell = Bundle.main.loadNibNamed(cellId, owner: self, options: nil)!.first as! GrailedCollectionViewCell
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let padding = layout.minimumLineSpacing
+        let cellWidth = (UIScreen.main.bounds.width - (3 * padding))/2
+        refCell.setWidthConstraint(cellWidth)
     }
 }
 
@@ -62,7 +65,7 @@ extension GrailedListViewController: UICollectionViewDataSource {
 extension GrailedListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = refCell.size(with: items[indexPath.item], for: cellWidth)
+        let size = refCell.size(with: items[indexPath.item])
         return size
     }
     

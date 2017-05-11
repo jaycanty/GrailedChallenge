@@ -42,7 +42,7 @@ class GrailedCollectionViewCell: UICollectionViewCell {
         container.widthAnchor.constraint(equalToConstant: width).isActive = true
     }
     
-    func size(with item: Item, for width: CGFloat) -> CGSize {
+    func size(with item: Item) -> CGSize {
         titleLabel.text = item.title
         designerLabel.text = item.designerName
         return container.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
