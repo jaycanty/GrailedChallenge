@@ -14,6 +14,7 @@ class GrailedListViewController: UIViewController {
     
     fileprivate let model = DataModel()
     fileprivate var items = [Item]()
+    fileprivate var isFetching = false
     
     fileprivate let cellId = "GrailedCollectionViewCell"
     fileprivate var refCell: GrailedCollectionViewCell!
@@ -25,6 +26,7 @@ class GrailedListViewController: UIViewController {
     }
     
     fileprivate func getItems() {
+        isFetching = true
         model.getData() { result in
             switch result {
             case .error(_):
@@ -34,6 +36,7 @@ class GrailedListViewController: UIViewController {
                 self.items = data
                 self.collectionView.reloadData()
             }
+            self.isFetching = false
         }
     }
     
@@ -72,8 +75,13 @@ extension GrailedListViewController: UICollectionViewDelegateFlowLayout {
 
 extension GrailedListViewController: UICollectionViewDelegate {
     
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        print(targetContentOffset.pointee)
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        // Triggers one screen above content size
+        if (scrollView.contentOffset.y + 2 * scrollView.bounds.height) >= scrollView.contentSize.height && !isFetching {
+            
+            print("Hoopla")
+        }
     }
 }
  
