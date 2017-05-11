@@ -12,20 +12,20 @@ import AlgoliaSearch
 class DataService {
     
     let formatter = DateFormatter()
-    
-    init() {
-        formatter.calendar = Calendar(identifier: .iso8601)
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"
-    }
-
     let indexName = "Listing_production"
     let client = Client(
         appID: "MNRWEFSS2Q",
         apiKey: "ce26ba82dbc20d4f25c28a2077ce159d"
     )
+    var index: Index!
     
+    init() {
+        formatter.calendar = Calendar(identifier: .iso8601)
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"
+        index = client.index(withName: indexName)
+    }
+
     func fetchListData(for page: UInt, complete: @escaping (Result<[Item]>)->()) {
-        let index = client.index(withName: indexName)
         let query = Query()
         query.page = page
         index.search(query) { content, error in

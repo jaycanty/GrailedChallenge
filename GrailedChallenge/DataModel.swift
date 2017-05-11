@@ -11,6 +11,8 @@ import Foundation
 
 class DataModel {
     
+    let service = DataService()
+    
     private var currentPage: UInt = 1 {
         didSet {
             if currentPage == 1 {
@@ -21,7 +23,6 @@ class DataModel {
     private var items = [Item]()
     
     func getData(complete: @escaping (Result<[Item]>)->()) {
-        let service = DataService()
         service.fetchListData(for: currentPage) { result in
             switch result {
             case .error(_):
