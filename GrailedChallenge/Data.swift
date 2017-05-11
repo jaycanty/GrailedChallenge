@@ -18,5 +18,13 @@ struct Item {
     var designerName: String
     var size: String
     var price: Int
-    var photo: String
+    var photo: Photo
+}
+
+
+struct Photo {
+    
+    var url: String
+    var width: Float
+    var height: Float
 }

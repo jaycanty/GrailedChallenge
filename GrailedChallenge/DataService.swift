@@ -45,7 +45,15 @@ class DataService {
                         let designerName = itemJson["designers"]?[0]?["name"]?.string,
                         let size = itemJson["size"]?.string,
                         let price = itemJson["price_i"]?.int,
-                        let photo = itemJson["cover_photo"]?["url"]?.string {
+                        let photoData = itemJson["cover_photo"],
+                        let photoURL = photoData["url"]?.string,
+                        let photoWidth = photoData["width"]?.int,
+                        let photoHeight = photoData["height"]?.int {
+                        let photo = Photo(
+                            url: photoURL,
+                            width: Float(photoWidth),
+                            height: Float(photoHeight)
+                        )
                         let item = Item(
                             id: id,
                             createdAt: date,

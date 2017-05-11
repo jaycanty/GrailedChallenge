@@ -15,7 +15,7 @@
 		6909D0121EC278EB00EB774B /* GrailedChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6909D0111EC278EB00EB774B /* GrailedChallengeTests.swift */; };
 		6909D01D1EC27AFD00EB774B /* GrailedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6909D01C1EC27AFD00EB774B /* GrailedListViewController.swift */; };
 		6909D0201EC27BD100EB774B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6909D01F1EC27BD100EB774B /* DataService.swift */; };
-		6909D0221EC2AD4700EB774B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6909D0211EC2AD4700EB774B /* Item.swift */; };
+		6909D0221EC2AD4700EB774B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6909D0211EC2AD4700EB774B /* Data.swift */; };
 		6909D0241EC3534C00EB774B /* JJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6909D0231EC3534C00EB774B /* JJson.swift */; };
 		6909D0261EC3547600EB774B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6909D0251EC3547600EB774B /* Utils.swift */; };
 		6909D0281EC3678D00EB774B /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6909D0271EC3678D00EB774B /* DataModel.swift */; };
@@ -49,7 +49,7 @@
 		6909D0131EC278EB00EB774B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6909D01C1EC27AFD00EB774B /* GrailedListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrailedListViewController.swift; sourceTree = "<group>"; };
 		6909D01F1EC27BD100EB774B /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		6909D0211EC2AD4700EB774B /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		6909D0211EC2AD4700EB774B /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		6909D0231EC3534C00EB774B /* JJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJson.swift; sourceTree = "<group>"; };
 		6909D0251EC3547600EB774B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		6909D0271EC3678D00EB774B /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 			children = (
 				6909D0271EC3678D00EB774B /* DataModel.swift */,
 				6909D01F1EC27BD100EB774B /* DataService.swift */,
-				6909D0211EC2AD4700EB774B /* Item.swift */,
+				6909D0211EC2AD4700EB774B /* Data.swift */,
 				6909D0231EC3534C00EB774B /* JJson.swift */,
 				6909D0251EC3547600EB774B /* Utils.swift */,
 			);
@@ -380,7 +380,7 @@
 			files = (
 				6909D0281EC3678D00EB774B /* DataModel.swift in Sources */,
 				6909D02F1EC3FC8400EB774B /* GrailedCollectionViewCell.swift in Sources */,
-				6909D0221EC2AD4700EB774B /* Item.swift in Sources */,
+				6909D0221EC2AD4700EB774B /* Data.swift in Sources */,
 				6909D0241EC3534C00EB774B /* JJson.swift in Sources */,
 				6909CFFD1EC278EA00EB774B /* AppDelegate.swift in Sources */,
 				6909D01D1EC27AFD00EB774B /* GrailedListViewController.swift in Sources */,
