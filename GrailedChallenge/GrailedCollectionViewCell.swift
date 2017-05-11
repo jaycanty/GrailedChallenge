@@ -39,7 +39,7 @@ class GrailedCollectionViewCell: UICollectionViewCell {
         
         setImageViewHeight(with: data)
         imageClosure = ImageClosure(view: self)
-        ImageManager.shared.image(
+        ImageManager.shared.imageData(
             for: data.photo.url,
             complete: imageClosure!.complete
         )
@@ -73,7 +73,7 @@ private class ImageClosure {
         if let data = data {
             let image = UIImage(data: data)
             DispatchQueue.main.async {
-                // Think there may be a bug in the API seems to switch width and height sometimes
+                // Think there may be a bug in the API, seems to switch width and height sometimes
                 if self?.view != nil && (CGFloat(self?.view?.data.photo.width ?? 0) != image?.size.width || CGFloat(self?.view?.data.photo.height ?? 0) != image?.size.height) {
                     self?.view?.imageView.contentMode = .scaleAspectFit
                 }

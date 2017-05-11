@@ -16,13 +16,12 @@ class ImageManager {
     private lazy var queue: OperationQueue = {
         let q = OperationQueue()
         q.name = "Image Queue"
-        q.maxConcurrentOperationCount = 6
+        q.maxConcurrentOperationCount = 100
         return q
     }()
     let cache = NSCache<NSString, NSData>()
     
-    
-    func image(for urlString: String, complete: @escaping (Data?)->()) {
+    func imageData(for urlString: String, complete: @escaping (Data?)->()) {
         queue.addOperation {
             if let data = self.cache.object(forKey: urlString as NSString) {
                 complete(data as Data)
