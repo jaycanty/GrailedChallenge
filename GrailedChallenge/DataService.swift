@@ -25,7 +25,7 @@ class DataService {
         index = client.index(withName: indexName)
     }
 
-    func fetchListData(for page: UInt, complete: @escaping (Result<[Item]>)->()) {
+    func fetchListData(for page: UInt, complete: @escaping (Result<ListData>)->()) {
         let query = Query()
         query.page = page
         index.search(query) { content, error in
@@ -68,7 +68,9 @@ class DataService {
                     }
                 }
             }
-            complete(.success(data: items))
+            let pages = UInt(json["nbPages"]?.int ?? 1)
+            let data = ListData(pages: pages, items: items)
+            complete(.success(data: data))
         }
     }
 }

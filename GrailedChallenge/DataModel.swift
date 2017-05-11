@@ -12,10 +12,10 @@ import Foundation
 class DataModel {
     
     let service = DataService()
-    
-    private var currentPage: UInt = 1 {
+    private var pages: UInt = 2
+    private var currentPage: UInt = 0 {
         didSet {
-            if currentPage == 1 {
+            if currentPage == 0 {
                 items.removeAll()
             }
         }
@@ -23,13 +23,17 @@ class DataModel {
     private var items = [Item]()
     
     func getData(complete: @escaping (Result<[Item]>)->()) {
+        if currentPage >= (pages - 1) {
+            complete(.success(data: items))
+            return
+        }
         service.fetchListData(for: currentPage) { result in
             switch result {
-            case .error(_):
-                complete(result)
+            case let .error(message):
+                complete(.error(message: message))
             case let .success(data):
-                self.items += data
-                // TODO: get max page and check
+                self.pages = data.pages
+                self.items += data.items
                 self.currentPage += 1
                 complete(.success(data: self.items))
             }

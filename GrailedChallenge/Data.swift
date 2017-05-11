@@ -8,6 +8,12 @@
 
 import Foundation
 
+struct ListData {
+    
+    var pages: UInt
+    var items: [Item]
+}
+
 
 struct Item {
 
