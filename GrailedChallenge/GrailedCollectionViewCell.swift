@@ -72,11 +72,11 @@ private class ImageClosure {
     lazy var complete: (Data?) -> () = { [weak self] data in
         if let data = data {
             let image = UIImage(data: data)
+            // Think there may be a bug in the API, seems to switch width and height sometimes
+            if self?.view != nil && (CGFloat(self?.view?.data.photo.width ?? 0) != image?.size.width || CGFloat(self?.view?.data.photo.height ?? 0) != image?.size.height) {
+                self?.view?.imageView.contentMode = .scaleAspectFit
+            }
             DispatchQueue.main.async {
-                // Think there may be a bug in the API, seems to switch width and height sometimes
-                if self?.view != nil && (CGFloat(self?.view?.data.photo.width ?? 0) != image?.size.width || CGFloat(self?.view?.data.photo.height ?? 0) != image?.size.height) {
-                    self?.view?.imageView.contentMode = .scaleAspectFit
-                }
                 self?.view?.imageView.image = image
             }
         } else {
