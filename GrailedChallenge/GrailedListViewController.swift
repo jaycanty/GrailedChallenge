@@ -11,6 +11,7 @@ import UIKit
 class GrailedListViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    private let refresher = UIRefreshControl()
     
     fileprivate let model = DataModel()
     fileprivate var items = [Item]()
@@ -28,6 +29,9 @@ class GrailedListViewController: UIViewController {
     fileprivate func getItems() {
         isFetching = true
         model.getData() { result in
+            if self.refresher.isRefreshing {
+                self.refresher.endRefreshing()
+            }
             switch result {
             case .error(_):
                 // TODO: show error
@@ -53,6 +57,7 @@ class GrailedListViewController: UIViewController {
     }
     
     fileprivate func configure() {
+        // Cell stuff
         let nib = UINib(nibName: cellId, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: cellId)
         refCell = Bundle.main.loadNibNamed(cellId, owner: self, options: nil)!.first as! GrailedCollectionViewCell
@@ -60,6 +65,14 @@ class GrailedListViewController: UIViewController {
         let padding = layout.minimumLineSpacing
         let cellWidth = (UIScreen.main.bounds.width - (3 * padding))/2
         refCell.setWidthConstraint(cellWidth)
+        // Refresh stuff
+        refresher.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+        collectionView.addSubview(refresher)
+    }
+    
+    func refresh(_ sender: UIRefreshControl) {
+        model.reset()
+        getItems()
     }
 }
 

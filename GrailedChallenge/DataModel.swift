@@ -39,4 +39,8 @@ class DataModel {
             }
         }
     }
+    
+    func reset() {
+        currentPage = 0
+    }
 }
