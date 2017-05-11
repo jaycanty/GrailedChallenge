@@ -68,6 +68,12 @@ extension GrailedListViewController: UICollectionViewDelegateFlowLayout {
         let size = refCell.size(with: items[indexPath.item])
         return size
     }
+}
+
+extension GrailedListViewController: UICollectionViewDelegate {
     
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        print(targetContentOffset.pointee)
+    }
 }
  
