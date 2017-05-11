@@ -21,6 +21,7 @@
 		6909D0281EC3678D00EB774B /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6909D0271EC3678D00EB774B /* DataModel.swift */; };
 		6909D02F1EC3FC8400EB774B /* GrailedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6909D02D1EC3FC8400EB774B /* GrailedCollectionViewCell.swift */; };
 		6909D0301EC3FC8400EB774B /* GrailedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6909D02E1EC3FC8400EB774B /* GrailedCollectionViewCell.xib */; };
+		6909D0321EC4AEC200EB774B /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6909D0311EC4AEC200EB774B /* ImageManager.swift */; };
 		8997BB83421D67BEF13F3F7A /* Pods_GrailedChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F70A0258B2AFF085FBB4BCE /* Pods_GrailedChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		6909D0271EC3678D00EB774B /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		6909D02D1EC3FC8400EB774B /* GrailedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrailedCollectionViewCell.swift; sourceTree = "<group>"; };
 		6909D02E1EC3FC8400EB774B /* GrailedCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrailedCollectionViewCell.xib; sourceTree = "<group>"; };
+		6909D0311EC4AEC200EB774B /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		70E6DC86D9E92F730A491223 /* Pods-GrailedChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrailedChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrailedChallengeTests/Pods-GrailedChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		7F70A0258B2AFF085FBB4BCE /* Pods_GrailedChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrailedChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D0ED443A350E2FD4B7B913 /* Pods_GrailedChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrailedChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +171,7 @@
 				6909D0211EC2AD4700EB774B /* Data.swift */,
 				6909D0231EC3534C00EB774B /* JJson.swift */,
 				6909D0251EC3547600EB774B /* Utils.swift */,
+				6909D0311EC4AEC200EB774B /* ImageManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				6909D0281EC3678D00EB774B /* DataModel.swift in Sources */,
 				6909D02F1EC3FC8400EB774B /* GrailedCollectionViewCell.swift in Sources */,
 				6909D0221EC2AD4700EB774B /* Data.swift in Sources */,
+				6909D0321EC4AEC200EB774B /* ImageManager.swift in Sources */,
 				6909D0241EC3534C00EB774B /* JJson.swift in Sources */,
 				6909CFFD1EC278EA00EB774B /* AppDelegate.swift in Sources */,
 				6909D01D1EC27AFD00EB774B /* GrailedListViewController.swift in Sources */,
