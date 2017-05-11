@@ -45,7 +45,7 @@ class GrailedCollectionViewCell: UICollectionViewCell {
     }
     
     func setImageViewHeight(with item: Item) {
-        let height = GrailedCollectionViewCell.width * CGFloat(item.photo.height / item.photo.width)
+        let height = round((GrailedCollectionViewCell.width - 2) * CGFloat(item.photo.height / item.photo.width))
         imageViewHeightConstraint.constant = height
     }
     
@@ -73,9 +73,8 @@ private class ImageClosure {
             let image = UIImage(data: data)
             DispatchQueue.main.async {
                 self?.view?.imageView.image = image
-                
+                // Think there may be a bug in the API seems to switch width and height sometimes
                 if CGFloat(self?.view?.data.photo.width ?? 0) != image?.size.width || CGFloat(self?.view?.data.photo.height ?? 0) != image?.size.height {
-                 
                     print("!-------------------------!!!!!!!!!!")
                     print(self?.view?.data.photo.width)
                     print(self?.view?.data.photo.height)
