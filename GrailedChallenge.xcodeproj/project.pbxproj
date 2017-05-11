@@ -168,10 +168,10 @@
 			children = (
 				6909D0271EC3678D00EB774B /* DataModel.swift */,
 				6909D01F1EC27BD100EB774B /* DataService.swift */,
+				6909D0311EC4AEC200EB774B /* ImageManager.swift */,
 				6909D0211EC2AD4700EB774B /* Data.swift */,
 				6909D0231EC3534C00EB774B /* JJson.swift */,
 				6909D0251EC3547600EB774B /* Utils.swift */,
-				6909D0311EC4AEC200EB774B /* ImageManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
