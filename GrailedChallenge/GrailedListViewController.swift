@@ -79,8 +79,7 @@ extension GrailedListViewController: UICollectionViewDelegate {
         
         // Triggers one screen above content size
         if (scrollView.contentOffset.y + 2 * scrollView.bounds.height) >= scrollView.contentSize.height && !isFetching {
-            
-            print("Hoopla")
+            getItems()
         }
     }
 }
