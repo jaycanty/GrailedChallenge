@@ -66,6 +66,7 @@
             <connections>
                 <outlet property="container" destination="glO-JB-jZu" id="hFX-fw-AdZ"/>
                 <outlet property="designerLabel" destination="KtW-Fs-Mna" id="7NB-Nl-px5"/>
+                <outlet property="imageAspectRatioConstraint" destination="YP0-JR-U0X" id="EMu-09-s1x"/>
                 <outlet property="imageView" destination="c4L-uE-hHL" id="W0K-C5-ECy"/>
                 <outlet property="titleLabel" destination="uoi-wg-I8G" id="o2W-hx-Jcf"/>
             </connections>
