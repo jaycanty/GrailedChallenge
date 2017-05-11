@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Grailed List View Controller-->
+        <!--Grailed-->
         <scene sceneID="z7i-XZ-g9j">
             <objects>
                 <viewController id="p1e-Yo-VBv" customClass="GrailedListViewController" customModule="GrailedChallenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,7 +45,7 @@
                             <constraint firstItem="P4W-7T-arl" firstAttribute="leading" secondItem="w1W-Rb-0Sq" secondAttribute="leading" id="xQR-aJ-tMy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0Cp-K9-pG0"/>
+                    <navigationItem key="navigationItem" title="Grailed" id="0Cp-K9-pG0"/>
                     <connections>
                         <outlet property="collectionView" destination="P4W-7T-arl" id="pav-ZH-QjH"/>
                     </connections>
