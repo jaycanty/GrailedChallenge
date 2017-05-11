@@ -10,6 +10,7 @@ import UIKit
 
 class GrailedCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var container: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageAspectRatioConstraint: NSLayoutConstraint!
     @IBOutlet weak var titleLabel: UILabel!
@@ -26,10 +27,9 @@ class GrailedCollectionViewCell: UICollectionViewCell {
         designerLabel.text = data.designerName
     }
     
-    
-    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        let atrbs = super.preferredLayoutAttributesFitting(layoutAttributes)
-        print(atrbs.frame)
-        return atrbs
+    func size(with item: Item, for width: CGFloat) -> CGSize {
+        titleLabel.text = item.title
+        designerLabel.text = item.designerName
+        return container.systemLayoutSizeFitting(CGSize(width: width, height: 0))
     }
 }

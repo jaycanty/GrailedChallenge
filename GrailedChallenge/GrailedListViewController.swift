@@ -57,6 +57,11 @@ extension GrailedListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
+        
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GrailedCollectionViewCell", for: IndexPath(item: 0, section: 0)) as? GrailedCollectionViewCell {
+            print(cell.size(with: items[indexPath.item], for: cellWidth))
+        }
+        
         return CGSize(width: cellWidth, height: cellWidth * 1.6)
     }
     
