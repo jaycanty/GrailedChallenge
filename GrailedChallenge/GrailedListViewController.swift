@@ -14,9 +14,15 @@ class GrailedListViewController: UIViewController {
     let model = DataModel()
     var items = [Item]()
     var cellWidth: CGFloat!
+    var refCell: GrailedCollectionViewCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let nib = UINib(nibName: "GrailedCollectionViewCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: "GrailedCollectionViewCell")
+        refCell = Bundle.main.loadNibNamed("GrailedCollectionViewCell", owner: self, options: nil)!.first as! GrailedCollectionViewCell
+        
         
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let padding = layout.minimumLineSpacing
@@ -58,11 +64,11 @@ extension GrailedListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GrailedCollectionViewCell", for: IndexPath(item: 0, section: 0)) as? GrailedCollectionViewCell {
-            print(cell.size(with: items[indexPath.item], for: cellWidth))
-        }
+        let size = refCell.size(with: items[indexPath.item], for: cellWidth)
         
-        return CGSize(width: cellWidth, height: cellWidth * 1.6)
+        print(size)
+        
+        return size
     }
     
 }

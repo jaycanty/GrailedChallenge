@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,68 +30,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GrailedCollectionViewCell" id="21c-eJ-qIP" customClass="GrailedCollectionViewCell" customModule="GrailedChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="8" width="150" height="200"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVN-qP-yAI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cee-Ka-fLk">
-                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="128"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" secondItem="Cee-Ka-fLk" secondAttribute="height" multiplier="75:64" id="Ga0-pR-voI"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYH-vd-KWP">
-                                                            <rect key="frame" x="8" y="136" width="134" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLY-0p-cN6">
-                                                            <rect key="frame" x="8" y="165" width="134" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="kLY-0p-cN6" secondAttribute="trailing" constant="8" id="3VS-KO-p2y"/>
-                                                        <constraint firstAttribute="bottom" secondItem="kLY-0p-cN6" secondAttribute="bottom" constant="14" id="8wx-ps-8tA"/>
-                                                        <constraint firstItem="kLY-0p-cN6" firstAttribute="top" secondItem="WYH-vd-KWP" secondAttribute="bottom" constant="8" id="BJd-5c-7cn"/>
-                                                        <constraint firstItem="Cee-Ka-fLk" firstAttribute="top" secondItem="RVN-qP-yAI" secondAttribute="top" id="Der-ue-PxC"/>
-                                                        <constraint firstItem="WYH-vd-KWP" firstAttribute="leading" secondItem="RVN-qP-yAI" secondAttribute="leading" constant="8" id="Edc-RP-6XZ"/>
-                                                        <constraint firstAttribute="trailing" secondItem="WYH-vd-KWP" secondAttribute="trailing" constant="8" id="J0w-Z7-zP6"/>
-                                                        <constraint firstItem="WYH-vd-KWP" firstAttribute="top" secondItem="Cee-Ka-fLk" secondAttribute="bottom" constant="8" id="eHn-8C-XNm"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Cee-Ka-fLk" secondAttribute="trailing" id="nZL-rq-1NQ"/>
-                                                        <constraint firstItem="Cee-Ka-fLk" firstAttribute="leading" secondItem="RVN-qP-yAI" secondAttribute="leading" id="rWp-6H-aHb"/>
-                                                        <constraint firstItem="kLY-0p-cN6" firstAttribute="leading" secondItem="RVN-qP-yAI" secondAttribute="leading" constant="8" id="uF5-E2-AXg"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="RVN-qP-yAI" secondAttribute="trailing" id="8Ji-Pf-Y0R"/>
-                                            <constraint firstItem="RVN-qP-yAI" firstAttribute="leading" secondItem="21c-eJ-qIP" secondAttribute="leading" id="B8A-Si-f2d"/>
-                                            <constraint firstAttribute="bottom" secondItem="RVN-qP-yAI" secondAttribute="bottom" id="a27-lK-ya2"/>
-                                            <constraint firstItem="RVN-qP-yAI" firstAttribute="top" secondItem="21c-eJ-qIP" secondAttribute="top" id="v94-mr-29F"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="container" destination="RVN-qP-yAI" id="V4d-jc-YFi"/>
-                                            <outlet property="designerLabel" destination="kLY-0p-cN6" id="o65-17-qxZ"/>
-                                            <outlet property="imageAspectRatioConstraint" destination="Ga0-pR-voI" id="ucp-Cr-GLa"/>
-                                            <outlet property="imageView" destination="Cee-Ka-fLk" id="Ols-bc-4yU"/>
-                                            <outlet property="titleLabel" destination="WYH-vd-KWP" id="bzb-o7-b35"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                                 <connections>
                                     <outlet property="dataSource" destination="p1e-Yo-VBv" id="bcZ-6O-thN"/>
                                     <outlet property="delegate" destination="p1e-Yo-VBv" id="G30-bV-tb5"/>
