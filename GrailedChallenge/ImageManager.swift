@@ -16,7 +16,7 @@ class ImageManager {
     private lazy var queue: OperationQueue = {
         let q = OperationQueue()
         q.name = "Image Queue"
-        q.maxConcurrentOperationCount = 10
+        q.maxConcurrentOperationCount = 6
         return q
     }()
     let cache = NSCache<NSString, NSData>()
