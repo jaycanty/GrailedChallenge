@@ -46,7 +46,7 @@ class GrailedCollectionViewCell: UICollectionViewCell {
     }
     
     func setImageViewHeight(with item: Item) {
-        let height = round((GrailedCollectionViewCell.width - 2) * CGFloat(item.photo.height / item.photo.width))
+        let height = round(GrailedCollectionViewCell.width * CGFloat(item.photo.height / item.photo.width))
         imageViewHeightConstraint.constant = height
     }
     

@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="150" height="216"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c4L-uE-hHL">
-                                <rect key="frame" x="1" y="1" width="148" height="149"/>
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="750" constant="150" id="Vvy-S2-zl7"/>
                                 </constraints>
@@ -30,21 +30,20 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoi-wg-I8G">
                                 <rect key="frame" x="8" y="158" width="134" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtW-Fs-Mna">
                                 <rect key="frame" x="8" y="187" width="134" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="c4L-uE-hHL" firstAttribute="leading" secondItem="glO-JB-jZu" secondAttribute="leading" constant="1" id="AZP-bB-mG7"/>
-                            <constraint firstAttribute="trailing" secondItem="c4L-uE-hHL" secondAttribute="trailing" constant="1" id="CuM-XN-FFd"/>
-                            <constraint firstItem="c4L-uE-hHL" firstAttribute="top" secondItem="glO-JB-jZu" secondAttribute="top" constant="1" id="PGh-vu-9Rk"/>
+                            <constraint firstItem="c4L-uE-hHL" firstAttribute="leading" secondItem="glO-JB-jZu" secondAttribute="leading" id="AZP-bB-mG7"/>
+                            <constraint firstAttribute="trailing" secondItem="c4L-uE-hHL" secondAttribute="trailing" id="CuM-XN-FFd"/>
+                            <constraint firstItem="c4L-uE-hHL" firstAttribute="top" secondItem="glO-JB-jZu" secondAttribute="top" id="PGh-vu-9Rk"/>
                             <constraint firstAttribute="trailing" secondItem="uoi-wg-I8G" secondAttribute="trailing" constant="8" id="R7F-XB-Ng5"/>
                             <constraint firstAttribute="trailing" secondItem="KtW-Fs-Mna" secondAttribute="trailing" constant="8" id="V5L-Pr-KtC"/>
                             <constraint firstAttribute="bottom" secondItem="KtW-Fs-Mna" secondAttribute="bottom" constant="8" id="dMV-sA-InR"/>
