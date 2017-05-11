@@ -46,7 +46,9 @@ class GrailedListViewController: UIViewController {
                     self.collectionView.reloadData()
                 }
             }
-            self.isFetching = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                self.isFetching = false
+            }
         }
     }
     
