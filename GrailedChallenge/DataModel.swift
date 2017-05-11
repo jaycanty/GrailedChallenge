@@ -11,14 +11,14 @@ import Foundation
 
 class DataModel {
     
-    var currentPage: UInt = 1 {
+    private var currentPage: UInt = 1 {
         didSet {
             if currentPage == 1 {
                 items.removeAll()
             }
         }
     }
-    var items = [Item]()
+    private var items = [Item]()
     
     func getData(complete: @escaping (Result<[Item]>)->()) {
         let service = DataService()
