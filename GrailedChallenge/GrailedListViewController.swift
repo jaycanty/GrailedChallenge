@@ -33,8 +33,18 @@ class GrailedListViewController: UIViewController {
                 // TODO: show error
                 break
             case let .success(data):
+                let currentCount = self.items.count
+                let newCount = data.count
                 self.items = data
-                self.collectionView.reloadData()
+                if newCount > currentCount {
+                    var paths = [IndexPath]()
+                    for i in currentCount..<newCount {
+                        paths.append(IndexPath(item: i, section: 0))
+                    }
+                    self.collectionView.insertItems(at: paths)
+                } else {
+                    self.collectionView.reloadData()
+                }
             }
             self.isFetching = false
         }
