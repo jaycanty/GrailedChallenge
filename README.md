@@ -2,7 +2,9 @@
 
 ####To run
 
-* open GrailedChallenge.xcworkspace in XCode
+* `git clone https://github.com/jaycanty/GrailedChallenge.git`
+* `cd GrailedChallenge`
+* `open GrailedChallenge.xcworkspace`
 * run (Pods are checked in)
 
 ####Shortcommings/Things I should have asked
