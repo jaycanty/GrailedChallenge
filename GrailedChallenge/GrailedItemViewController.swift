@@ -28,27 +28,30 @@ class GrailedItemViewController: UIViewController {
         spinner.startAnimating()
         
         ImageManager.shared.imageData(for: data.photo.url) { data in
-            self.spinner.stopAnimating()
-            if let data = data,
-                let image = UIImage(data: data) {
-                DispatchQueue.main.async {
-                    self.configure(image: image)
-                }
+            DispatchQueue.main.async {
+                self.configure(imageData: data)
             }
         }
     }
     
-    func configure(image: UIImage) {
-        
+    func configure(imageData: Data?) {
+        self.spinner.stopAnimating()
         contentView.alpha = 0
         
-        let res = UIScreen.main.scale
+        // Image
+        var image = UIImage(named: "error")!
+        var res: CGFloat = 1
+        if let imageData = imageData,
+            let i = UIImage(data: imageData) {
+            image = i
+            res = UIScreen.main.scale
+        }
         let width = min(image.size.width/res, UIScreen.main.bounds.width)
         let height = width * image.size.height / image.size.width
         self.imageViewWidthConstraint.constant = width
         self.imageViewHeightConstraint.constant = height
         self.imageView.image = image
-        
+        // Labels
         titleLabel.text = data.title
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency

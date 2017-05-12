@@ -14,7 +14,6 @@ class GrailedListViewController: UIViewController {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     private let refresher = UIRefreshControl()
     
-    
     fileprivate let model = DataModel()
     fileprivate var items = [Item]()
     fileprivate var isFetching = false
@@ -39,7 +38,9 @@ class GrailedListViewController: UIViewController {
             }
             switch result {
             case .error(_):
-                // TODO: show error
+                if self.items.count == 0 {
+                    self.showError()
+                }
                 break
             case let .success(data):
                 let currentCount = self.items.count
@@ -78,6 +79,17 @@ class GrailedListViewController: UIViewController {
         collectionView.addSubview(refresher)
     }
     
+    fileprivate func showError() {
+        let alert = UIAlertController(title: "OH NO", message: "A catastrophie has happened somewhere along the line. Make sure there's a network...", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Try again", style: .default) { action in
+            self.spinner.isHidden = false
+            self.spinner.startAnimating()
+            self.getItems()
+        }
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
     func refresh(_ sender: UIRefreshControl) {
         model.reset()
         getItems()
@@ -91,7 +103,6 @@ class GrailedListViewController: UIViewController {
         }
     }
 }
-
 
 extension GrailedListViewController: UICollectionViewDataSource {
     
