@@ -11,7 +11,9 @@ import UIKit
 class GrailedListViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     private let refresher = UIRefreshControl()
+    
     
     fileprivate let model = DataModel()
     fileprivate var items = [Item]()
@@ -29,6 +31,9 @@ class GrailedListViewController: UIViewController {
     fileprivate func getItems() {
         isFetching = true
         model.getData() { result in
+            if self.spinner.isAnimating {
+                self.spinner.stopAnimating()
+            }
             if self.refresher.isRefreshing {
                 self.refresher.endRefreshing()
             }
@@ -57,6 +62,9 @@ class GrailedListViewController: UIViewController {
     }
     
     fileprivate func configure() {
+        //spinner
+        spinner.hidesWhenStopped = true
+        spinner.startAnimating()
         // Cell stuff
         let nib = UINib(nibName: cellId, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: cellId)
