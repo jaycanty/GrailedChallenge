@@ -74,6 +74,14 @@ class GrailedListViewController: UIViewController {
         model.reset()
         getItems()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if let details = segue.destination as? GrailedItemViewController,
+            let item = sender as? GrailedChallenge.Item {
+            details.data = item
+        }
+    }
 }
 
 
@@ -100,8 +108,12 @@ extension GrailedListViewController: UICollectionViewDelegateFlowLayout {
 
 extension GrailedListViewController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = items[indexPath.item]
+        performSegue(withIdentifier: "ToDetail", sender: item)
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
         // Triggers one screen above content size
         if (scrollView.contentOffset.y + 2 * scrollView.bounds.height) >= scrollView.contentSize.height && !isFetching {
             getItems()
